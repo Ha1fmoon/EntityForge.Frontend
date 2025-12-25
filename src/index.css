@@ -1,0 +1,128 @@
+:root {
+    --pico-font-size: 15px;
+    --pico-line-height: 1.4;
+    --pico-spacing: 0.75rem;
+    --pico-form-element-spacing-vertical: 0.5rem;
+    --pico-form-element-spacing-horizontal: 0.75rem;
+
+    --btn-success-bg: #2e7d32;
+    --btn-success-hover: #1b5e20;
+    --btn-danger-bg: #c62828;
+    --btn-danger-hover: #b71c1c;
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+button, [type="submit"], [type="button"] {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+button.success, .btn-success {
+    background: var(--btn-success-bg);
+    border-color: var(--btn-success-bg);
+    color: white;
+}
+
+button.success:hover, .btn-success:hover {
+    background: var(--btn-success-hover);
+    border-color: var(--btn-success-hover);
+}
+
+button.danger, .btn-danger {
+    background: var(--btn-danger-bg);
+    border-color: var(--btn-danger-bg);
+    color: white;
+}
+
+button.danger:hover, .btn-danger:hover {
+    background: var(--btn-danger-hover);
+    border-color: var(--btn-danger-hover);
+}
+
+button.danger.outline {
+    background: transparent;
+    border-color: var(--btn-danger-bg);
+    color: var(--btn-danger-bg);
+}
+
+button.danger.outline:hover {
+    background: var(--btn-danger-bg);
+    color: white;
+}
+
+input, select, textarea {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+article {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background: var(--pico-card-background-color);
+    border-right: 1px solid var(--pico-muted-border-color);
+    padding: 16px 8px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-item {
+    text-align: left;
+    padding: 10px 12px;
+    border: none;
+    border-radius: var(--pico-border-radius);
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.menu-item:hover {
+    background: var(--pico-secondary-hover-background);
+}
+
+.menu-item.active {
+    background: var(--pico-primary-background);
+    color: var(--pico-primary-inverse);
+}
+
+.content {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--pico-muted-border-color);
+}
+
+.page-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.muted {
+    color: var(--pico-muted-color);
+    font-size: 0.85em;
+}
